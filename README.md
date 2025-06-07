@@ -1,5 +1,7 @@
 # Directory Tree Generator
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+
 Generate a visual directory tree of any folder with optional exclusions. View it in your terminal or save it as a text file. Easily explore and document project structures with colorful, user-friendly output.
 
 ## Features

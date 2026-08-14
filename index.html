@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Piestructure — a lightweight Python directory tree generator for exploring and documenting project structure.">
+  <meta name="theme-color" content="#0a0b10">
+  <title>Piestructure — See the shape of your project</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="grid"></div>
+
+  <header class="nav">
+    <a class="brand" href="#">
+      <span class="brand-mark">P</span>
+      <span>Piestructure</span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#usage">Usage</a>
+      <a class="nav-button" href="https://github.com/ADevNamedDeLL/" target="_blank" rel="noreferrer">My GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> Python utility · cross-platform</div>
+        <div class="palette-line" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <h1>See the shape of<br><em>your project.</em></h1>
+        <p class="hero-text">
+          Piestructure turns any directory into a clean, readable tree. Explore a project from the terminal,
+          hide paths you do not need, or export the structure for later reference.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#usage">Get started <span>→</span></a>
+          <a class="button secondary" href="https://github.com/ADevNamedDeLL/Piestructure" target="_blank" rel="noreferrer">Source code</a>
+        </div>
+        <div class="meta-row">
+          <span>Python 3.x</span>
+          <i></i>
+          <span>Colorama</span>
+          <i></i>
+          <span>Windows · Linux · macOS</span>
+        </div>
+      </div>
+
+      <div class="terminal-wrap">
+        <div class="terminal-glow"></div>
+        <div class="terminal">
+          <div class="terminal-top">
+            <div class="dots"><b></b><b></b><b></b></div>
+            <span>piestructure</span>
+            <span class="terminal-status">READY</span>
+          </div>
+          <div class="terminal-body">
+            <div class="command"><span class="prompt">$</span> python Piestructure.py</div>
+            <div class="ascii-title">PIESTRUCTURE</div>
+            <div class="terminal-line dim">made by adevnameddell</div>
+            <div class="terminal-menu">
+              <div><span>1.</span> Make Structure</div>
+              <div><span>2.</span> About</div>
+              <div class="danger"><span>3.</span> Exit</div>
+            </div>
+            <div class="command active"><span class="prompt">&gt;</span> 1</div>
+            <div class="terminal-line">Enter title for the output file: <strong>my-project</strong></div>
+            <div class="terminal-line">Enter path to the directory: <strong>./project</strong></div>
+            <div class="terminal-line">Enter addresses to exclude: <strong>node_modules, .git</strong></div>
+            <div class="tree-preview">
+              <div>my-project</div>
+              <div>├── src</div>
+              <div>│   ├── main.py</div>
+              <div>│   └── utils.py</div>
+              <div>├── tests</div>
+              <div>│   └── test_main.py</div>
+              <div>└── README.md</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Project highlights">
+      <div>DIRECTORY TREES</div><span>•</span>
+      <div>PATH EXCLUSIONS</div><span>•</span>
+      <div>TEXT EXPORTS</div><span>•</span>
+      <div>ZERO GUI DEPENDENCIES</div><span>•</span>
+      <div>DIRECTORY TREES</div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">01 / What it does</div>
+          <h2>Simple tool.<br><span>Useful output.</span></h2>
+        </div>
+        <p>Piestructure is deliberately focused. It gives you a quick way to understand what is inside a project without turning the process into another project of its own.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card large">
+          <div class="feature-number">01</div>
+          <div class="feature-icon tree-icon">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <h3>Recursive trees</h3>
+          <p>Walk through nested folders and files and produce a familiar tree layout that is easy to scan in a terminal.</p>
+          <div class="mini-tree">project/<br>├─ src/<br>│  └─ app.py<br>└─ README.md</div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-number">02</div>
+          <h3>Exclude what gets in the way</h3>
+          <p>Leave large or irrelevant paths out of the generated structure. Pass multiple paths as a comma-separated list.</p>
+          <div class="tag-row"><span>node_modules</span><span>.git</span><span>build</span></div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-number">03</div>
+          <h3>Keep a copy</h3>
+          <p>Save a generated structure into the project's <code>exports</code> directory as a plain text file.</p>
+          <div class="file-chip"><span>.txt</span> project-structure.txt</div>
+        </article>
+
+        <article class="feature-card accent">
+          <div class="feature-number">04</div>
+          <h3>Made for real terminals</h3>
+          <p>Colorama handles Windows terminal color support while the core directory logic stays portable across major desktop platforms.</p>
+          <div class="platforms"><span>WIN</span><span>LIN</span><span>MAC</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow" class="workflow section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">02 / The workflow</div>
+          <h2>From folder<br><span>to structure.</span></h2>
+        </div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-index">01</div>
+          <div><h3>Point it at a directory</h3><p>Give Piestructure the folder you want to inspect. User paths are expanded before the directory is processed.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-index">02</div>
+          <div><h3>Choose exclusions</h3><p>Skip paths that make the output noisy, such as dependency folders, generated builds, or version-control data.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-index">03</div>
+          <div><h3>Display or export</h3><p>Print the result immediately, save it to a text file, or do both. The output stays plain and portable.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="usage" class="usage section">
+      <div class="usage-panel">
+        <div class="usage-copy">
+          <div class="eyebrow">03 / Get started</div>
+          <h2>Small setup.<br><span>Immediate output.</span></h2>
+          <p>Clone the repository, install its only third-party dependency, and run the script. There is no build system or framework to configure.</p>
+          <a class="button primary" href="https://github.com/ADevNamedDeLL/Piestructure" target="_blank" rel="noreferrer">Open repository <span>↗</span></a>
+        </div>
+        <div class="code-window">
+          <div class="code-head"><span>terminal</span><span>setup</span></div>
+          <pre><code><span class="comment"># clone</span>
+git clone https://github.com/ADevNamedDeLL/Piestructure.git
+cd Piestructure
+
+<span class="comment"># install dependency</span>
+pip install colorama
+
+<span class="comment"># run</span>
+python Piestructure.py</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-mark">P</div>
+      <div>
+        <div class="eyebrow">Piestructure</div>
+        <h2>Know what is<br><span>inside the box.</span></h2>
+      </div>
+      <a class="button secondary" href="https://github.com/ADevNamedDeLL/Piestructure" target="_blank" rel="noreferrer">View source <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <span>Piestructure · an open-source Python utility by ADevNamedDeLL</span>
+    <span>MIT License</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
